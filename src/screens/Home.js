@@ -6,7 +6,10 @@ posthog.init("phc_f0oNZoLhGL2yNFb5oMXflD1RBbiTo8yyb1grAEDd9ae", {
 
 function Home() {
   const handleButton1 = () => {
-    posthog.capture("my event", { property: "value" });
+    posthog.capture("BUTTON EVENT", { property: "1" });
+  };
+  const handleButton2 = () => {
+    posthog.capture("BUTTON EVENT", { property: "2" });
   };
   return (
     <div
@@ -18,6 +21,7 @@ function Home() {
       }}
     >
       <button onClick={handleButton1}>Button1</button>
+      <button onClick={handleButton2}>Button1</button>
     </div>
   );
 }
